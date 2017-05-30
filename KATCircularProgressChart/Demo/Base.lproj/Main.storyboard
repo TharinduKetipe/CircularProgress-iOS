@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOl-2d-AEg" customClass="KATCircularProgress">
+                                <rect key="frame" x="62.5" y="95" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Qfx-pq-ZAD"/>
+                                    <constraint firstAttribute="width" constant="250" id="aTz-6q-vtm"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EY-m4-bji">
+                                <rect key="frame" x="112.5" y="465" width="150" height="45"/>
+                                <color key="backgroundColor" red="0.027450980390000001" green="0.21960784310000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Ofb-qb-BVb"/>
+                                    <constraint firstAttribute="height" constant="45" id="lWg-mm-uhF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Chart List">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapChartList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O38-Zy-W7o"/>
+                                    <segue destination="LTe-YC-hmK" kind="presentation" id="m6r-qm-jzg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h27-Cs-kBb">
+                                <rect key="frame" x="112" y="395" width="150" height="45"/>
+                                <color key="backgroundColor" red="0.027450980390000001" green="0.21960784310000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="G0F-w0-SaU"/>
+                                    <constraint firstAttribute="height" constant="45" id="RXB-WT-2lt"/>
+                                    <constraint firstAttribute="width" constant="150" id="leu-TR-SMm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="rUW-av-qxX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Start Animation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycn-o4-7WN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="h27-Cs-kBb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9fp-0Y-w5l"/>
+                            <constraint firstItem="3EY-m4-bji" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D9h-JF-wKU"/>
+                            <constraint firstItem="h27-Cs-kBb" firstAttribute="top" secondItem="VOl-2d-AEg" secondAttribute="bottom" constant="50" id="GkG-cX-o1U"/>
+                            <constraint firstItem="VOl-2d-AEg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gtf-uT-eEX"/>
+                            <constraint firstItem="VOl-2d-AEg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="kdv-fP-5N1"/>
+                            <constraint firstItem="3EY-m4-bji" firstAttribute="top" secondItem="h27-Cs-kBb" secondAttribute="bottom" constant="25" id="riK-XB-lgC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ProgressChart" destination="VOl-2d-AEg" id="zI2-zn-ah8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Chart List Controller-->
+        <scene sceneID="85T-V1-hA8">
+            <objects>
+                <tableViewController id="LTe-YC-hmK" customClass="ChartListController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1cu-l3-Mgr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="IkY-Za-qsN" userLabel="headerView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chart List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZq-xG-k1g">
+                                    <rect key="frame" x="75" y="10" width="275" height="40"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLr-tB-Y7q">
+                                    <rect key="frame" x="5" y="5" width="50" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="Ah5-GV-5H4"/>
+                                    </constraints>
+                                    <state key="normal" image="back"/>
+                                    <connections>
+                                        <action selector="didTapBackButton:" destination="LTe-YC-hmK" eventType="touchUpInside" id="lTl-UA-nYb"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.027450980390000001" green="0.21960784310000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="PZq-xG-k1g" secondAttribute="bottom" constant="5" id="2dX-um-uUS"/>
+                                <constraint firstItem="PZq-xG-k1g" firstAttribute="top" secondItem="IkY-Za-qsN" secondAttribute="top" constant="10" id="Ejw-bb-kTq"/>
+                                <constraint firstAttribute="trailing" secondItem="PZq-xG-k1g" secondAttribute="trailing" constant="25" id="GLf-EZ-s4a"/>
+                                <constraint firstItem="YLr-tB-Y7q" firstAttribute="leading" secondItem="IkY-Za-qsN" secondAttribute="leading" constant="5" id="Xxg-ON-0vw"/>
+                                <constraint firstItem="PZq-xG-k1g" firstAttribute="leading" secondItem="IkY-Za-qsN" secondAttribute="leading" constant="75" id="e0m-0Y-dOz"/>
+                                <constraint firstItem="YLr-tB-Y7q" firstAttribute="top" secondItem="IkY-Za-qsN" secondAttribute="top" constant="5" id="vxV-Ji-adS"/>
+                                <constraint firstAttribute="bottom" secondItem="YLr-tB-Y7q" secondAttribute="bottom" constant="5" id="yXr-sH-HBG"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chartCell" rowHeight="200" id="gpM-wR-2x2" customClass="ChartCell">
+                                <rect key="frame" x="0.0" y="83" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gpM-wR-2x2" id="M0x-ik-BMA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z4Q-yO-V8a" customClass="KATCircularProgress">
+                                            <rect key="frame" x="87.5" y="-1" width="200" height="200"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="WiU-e2-gke"/>
+                                                <constraint firstAttribute="height" constant="200" id="r3d-oF-RGA"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Z4Q-yO-V8a" firstAttribute="centerX" secondItem="M0x-ik-BMA" secondAttribute="centerX" id="Pdd-B9-I4N"/>
+                                        <constraint firstItem="Z4Q-yO-V8a" firstAttribute="centerY" secondItem="M0x-ik-BMA" secondAttribute="centerY" id="a6d-fM-LIn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="progressChart" destination="Z4Q-yO-V8a" id="4ik-5Y-m5t"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LTe-YC-hmK" id="RGS-2B-usx"/>
+                            <outlet property="delegate" destination="LTe-YC-hmK" id="JwS-10-sUc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reh-NP-gr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="62"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="13" height="21"/>
+    </resources>
+</document>
